@@ -3,12 +3,16 @@
         
         $scope.loginInfo = { login: "", password: "" };
         $scope.authenticUser = null;
+        $scope.serverRunning = false;
+
         var users = [];
         $scope.onLogin = function () {
             $log.debug("We are now waiting for the server to respond");
             $log.debug("This is going to take 1500 milliseconds");
+            $scope.serverRunning = true;
             userService.getUsers().then(function (data) {
                 //this is when we have deferred.resolve();
+
                 $log.debug("we have received the data from the server");
                 users = data;
                 //$log.debug("the login of the user is : " + $scope.loginInfo.login);
@@ -23,8 +27,10 @@
                         $scope.authenticUser = false;
                     }
                 }
+                $scope.serverRunning = false;
             }, function (data) {
                 //this is run when we have deferred.reject()
+                $scope.serverRunning = false;
             });
            
 

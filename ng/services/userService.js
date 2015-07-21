@@ -15,7 +15,7 @@
                 //is on another thread
                 $timeout(function () {
                     deferred.resolve(result);
-                }, 2500)
+                }, 5000)
                 //this is the main thread
                 return deferred.promise;
 
