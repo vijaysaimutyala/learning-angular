@@ -1,5 +1,5 @@
 ﻿(function () {
-    var mainController = angular.module("myApp").controller("mainController", function ($scope, $log, userService) {
+    var mainController = angular.module("myApp").controller("mainController", function ($scope, $log, userService, $location) {
         
         $scope.loginInfo = { login: "", password: "" };
         $scope.authenticUser = null;
@@ -21,6 +21,8 @@
                     if (users[i].email == $scope.loginInfo.login && users[i].id == $scope.loginInfo.password) {
                         $log.debug("the user is valid and with the role manager");
                         $scope.authenticUser = true;
+                        //we would want to move to /reportees
+                        $location.url("/reportees")
                         break;
                     }
                     else {

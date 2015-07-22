@@ -10,11 +10,13 @@
     <script src="Scripts/angular-route.js"></script>
     <!-- all the modules here -->
     <script src="ng/modules/myApp.js"></script>
+    <script src="ng/routes/myRoute.js"></script>
     <script src="ng/services/valueProvider.js"></script>
     <script src="ng/services/userService.js"></script>
     <!-- have the controllers here -->
     <script src="ng/controllers/mainController.js"></script>
     <script src="ng/controllers/testController.js"></script>
+    <script src="ng/controllers/reporteesController.js"></script>
 </head>
 <body ng-app="myApp">
     <nav class="navbar navbar-default">
@@ -65,35 +67,9 @@
     <!-- once the user is authenticated we want to move to page that shows all his reportees -->
     <!-- if not authenticated  then i would want to show a warning message -->
 
-    <div class="col-md-4 col-md-offset-4" ng-controller="mainController">
-        <div class="well">
-            <div ng-hide="serverRunning">
-                <div class="form-group">
-                    <input ng-model="loginInfo.login" class="form-control" id="focusedInput" type="text" value="" placeholder="enter your login id">
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="password" class="form-control" ng-model="loginInfo.password">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button" ng-click="onLogin()">
-                                <span class="glyphicon glyphicon-send"></span>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-                <div ng-show="authenticUser==false" class="alert alert-dismissible alert-warning">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    <h4>Aww snap!!, Sthaaap!!!!</h4>
-                    <p>Better check your password and login id</p>
-                </div>
-            </div>
-            <div ng-show="serverRunning">
-                <h4>Hang on tight .. </h4>
-                <div class="progress progress-striped active">
-                    <div class="progress-bar" style="width: 100%"></div>
-                </div>
-            </div ng-show="serverRunning">
-        </div>
+   
+    <div ng-view="">
+
     </div>
 
 </body>
