@@ -15,6 +15,29 @@
                 //this is the main thread
                 return deferred.promise;
 
+            },
+            getReportees: function (id) {
+                var deferred = $q.defer();
+
+                var users = valueProvider.userSet;
+                var result = [];
+                //foreach(item in users){
+                
+                //}
+                $.each(users, function (index, value) {
+                    if (value.id == id) {
+                         result =value.reportees;
+                    }
+                });
+                $timeout(function () {
+                    if (result.length <= 0) {
+                        deferred.reject(result);
+                    }
+                    else {
+                        deferred.resolve(result);
+                    }
+                }, 2000)
+                return deferred.promise;
             }
         }
     })

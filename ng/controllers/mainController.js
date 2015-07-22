@@ -22,7 +22,7 @@
                         $log.debug("the user is valid and with the role manager");
                         $scope.authenticUser = true;
                         //we would want to move to /reportees
-                        $location.url("/reportees")
+                        $location.url("/reportees/" + users[i].id);
                         break;
                     }
                     else {
