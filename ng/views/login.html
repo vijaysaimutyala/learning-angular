@@ -1,33 +1,17 @@
-﻿<div class="col-md-4 col-md-offset-4" >
-       <div class="well">
-           <div ng-hide="serverRunning">
-               <div class="page-header">
-                   <h3>Login</h3>
-               </div>
-               <div class="form-group">
-                   <input ng-model="loginInfo.login" class="form-control" id="focusedInput" type="text" value="" placeholder="enter your login id">
-               </div>
-               <div class="form-group">
-                   <div class="input-group">
-                       <input type="password" class="form-control" ng-model="loginInfo.password">
-                       <span class="input-group-btn">
-                           <button class="btn btn-primary" type="button" ng-click="onLogin()">
-                               <span class="glyphicon glyphicon-send"></span>
-                           </button>
-                       </span>
-                   </div>
-               </div>
-               <div ng-show="authenticUser==false" class="alert alert-dismissible alert-warning">
-                   <button type="button" class="close" data-dismiss="alert">×</button>
-                   <h4>Aww snap!!, Sthaaap!!!!</h4>
-                   <p>Better check your password and login id</p>
-               </div>
-           </div>
-           <div ng-show="serverRunning">
-               <h4>Hang on tight .. </h4>
-               <div class="progress progress-striped active">
-                   <div class="progress-bar" style="width: 100%"></div>
-               </div>
-           </div ng-show="serverRunning">
-       </div>
-   </div>
+﻿<div class="col-md-4 col-md-offset-4">
+    <!-- scopes : Shared, Inherited, Isolated -->
+    <!-- this is the level of the controller --> <!-- onLogin -->
+    <div class="well">
+        <!--<div login-box></div>-->
+        <!-- this is the level of the directives controller -->
+        <!-- loginInfo -->
+        <login-box>
+           
+        </login-box>
+        <p>
+        <p>this is from the mainController</p>
+            <label>{{loginInfo.login}}</label>
+            <label>{{loginInfo.password}}</label>
+        </p>
+    </div>
+</div>

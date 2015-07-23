@@ -2,9 +2,10 @@
     var mainController = angular.module("myApp").controller("mainController",
         function ($scope, $log, userService, $location, $rootScope) {
         
-        $scope.loginInfo = { login: "", password: "" };
+       
         $scope.authenticUser = null;
         $scope.serverRunning = false;
+        $scope.loginInfo = { login: "", password: "" };
 
         var users = [];
         $scope.onLogin = function () {
