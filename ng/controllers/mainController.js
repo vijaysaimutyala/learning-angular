@@ -6,9 +6,12 @@
         $scope.authenticUser = null;
         $scope.serverRunning = false;
         $scope.loginInfo = { login: "", password: "" };
+        $scope.$on("auth-issue", function () {
 
+        })
         var users = [];
         $scope.onLogin = function () {
+            $scope.$broadcast("auth-begin");
             $log.debug("We are now waiting for the server to respond");
             $log.debug("This is going to take 1500 milliseconds");
             $scope.serverRunning = true;
