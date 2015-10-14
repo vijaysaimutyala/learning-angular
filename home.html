@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>My first take with NG</title>
+    <script src="Scripts/jquery-1.9.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <!-- all our modules here -->
+    <script src="ng/module/myApp.js"></script>
+    <!-- master route here -->
+    <script src="ng/routes/masterRoute.js"></script>
+    <!-- all our controllers here -->
+    <script src="ng/controllers/mainController.js"></script>
+    <script src="ng/controllers/loginController.js"></script>
+    <script src="ng/controllers/adminController.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="mainController">
+    <div ng-view="">
+        
+    </div>
+</body>
+</html>
