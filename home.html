@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>My first take with NG</title>
+    <title>My first webapp</title>
     <script src="Scripts/jquery-1.9.0.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/angular.js"></script>
@@ -9,11 +9,13 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
   
-   
+    <!-- all my modules here -->
+    <script src="ng/module/myApp.js"></script>
+    <script src="ng/routes/myRoutes.js"></script>
+    <!-- all my controllers are here -->
+    <script src="ng/controllers/loginController.js"></script>
 </head>
-<body ng-app="myApp" ng-controller="mainController">
-    <div ng-view="">
-        
-    </div>
+<body ng-app="myApp">
+    <div ng-view=""></div>
 </body>
 </html>
