@@ -1,5 +1,5 @@
 ﻿(function () {
-    var loginController = angular.module("myApp").controller("loginController", function ($scope, $http, loginService) {
+    var loginController = angular.module("myApp").controller("loginController", function ($scope, $http, loginService, $location) {
         $scope.login = {
             username: "",
             password:""
@@ -13,6 +13,8 @@
                 console.log("this is from inside the controller");
                 console.log(data);
                 $scope.awaitingServer = false;
+                loginService.loggedInUser = data;
+                $location.url("/admin")
             }, function (data) {
                 //this is where it lands up in the rejection case
                 console.log("this is from inside the controller");

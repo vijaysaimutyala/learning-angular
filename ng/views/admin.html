@@ -1,0 +1,24 @@
+﻿<div class="col-md-6 col-md-offset-3">
+    <div class="page-header">
+        <h3>
+            {{user.username}}
+        </h3>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th><h3>email</h3></th>
+                <th><h3>empno</h3></th>
+                <th><h3>location</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="reportee in reportees">
+                <td>{{reportee.email}}</td>
+                <td>{{reportee.empno}}</td>
+                <td>{{reportee.location}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" value="remove" ng-click="removeOneReportee()"/>
+</div>

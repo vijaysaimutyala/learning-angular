@@ -5,6 +5,14 @@
             return this.baseUrl + "/login/authenticate"
         }
         this.loggedInUser = {};
+        this.reportees = [
+            { email: "emp_1@infosys.com", empno: 1, location: "pune" },
+            { email: "emp_2@infosys.com", empno: 2, location: "mysore" },
+            { email: "emp_3@infosys.com", empno: 3, location: "bangalore" },
+            { email: "emp_4@infosys.com", empno: 4, location: "chandigarh" },
+            { email: "emp_5@infosys.com", empno: 5, location: "mangalore" },
+            { email: "emp_6@infosys.com", empno: 6, location: "trivandrum" },
+        ];
         this.login = function (login) {
             //this is wehre the story becomes ineresting
             var deferred = $q.defer();
