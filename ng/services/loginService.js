@@ -1,6 +1,6 @@
 ﻿(function () {
     var loginService = angular.module("myApp").service("loginService", function ($http, $q) {
-        this.baseUrl = "http://localhost:9090/webapi";
+        this.baseUrl = "http://vpunplepun2-01:8081/webapi";
         this.loginUrl = function () {
             return this.baseUrl + "/login/authenticate"
         }
