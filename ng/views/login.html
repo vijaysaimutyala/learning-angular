@@ -1,29 +1,6 @@
 ﻿<div class="col-md-4 col-md-offset-4">
+    <login-box>
+        <!-- this is where the html would be injected when the replace is false -->
+    </login-box>
     
-    <form class="form-horizontal" >
-        <fieldset>
-            <legend>Login</legend>
-            <div ng-show="awaitingServer">
-                <p>We are authenticating you...</p>
-                <div class="progress progress-striped active">
-                    <div class="progress-bar progress-bar-info" style="width: 100%"></div>
-                </div>
-            </div>
-            
-            <div class="form-group" ng-hide="awaitingServer">
-                <div class="col-lg-10">
-                    <input ng-model="login.username" type="text" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-            </div>
-            <div class="input-group" ng-hide="awaitingServer">
-                <input type="password" ng-model="login.password" class="form-control">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" ng-click="attemptLogin()">
-                        <span class="glyphicon glyphicon-send"></span>
-                    </button>
-                </span>
-            </div>
-
-        </fieldset>
-    </form>
 </div>
