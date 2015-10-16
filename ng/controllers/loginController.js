@@ -5,9 +5,9 @@
             authorization: "niranjan_awati",
             password:"41993"
         };
-        $scope.disableAccount = function (message) {
+        $scope.disableAccount = function (account) {
             console.log("we have reached the higher controller and we are ready to disable the account");
-            console.log(message);
+            console.log(account);
         }
     })
 })(); 

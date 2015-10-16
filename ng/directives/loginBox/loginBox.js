@@ -23,7 +23,7 @@
                     console.log($scope.acc);
                     console.log("this was from within the directive");
                     //do not try this at home.. dangerous, i shall let you know what went wrong here.. 
-                    $scope.disableacc({ message: "this is just a plain message" });
+                    $scope.disableacc({ account: $scope.acc});
                     //$scope.awaitingServer = true;
                     //loginService.login($scope.login).then(function (data) {
                     //    //this is where it lands up in the resolve condition
