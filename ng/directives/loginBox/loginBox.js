@@ -5,8 +5,12 @@
             restrict: "E",
             replace: true,
             templateUrl: "/ng/directives/loginBox/loginBox.html",
-            scope:true,
+            scope: {
+                acc:"="
+            },
             controller: function ($scope, loginService, $location) {
+                console.log($scope);
+                console.log($scope.acc);
                 $scope.login = {
                     username: "",
                     password: ""
